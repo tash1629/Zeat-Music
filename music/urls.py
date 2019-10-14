@@ -11,7 +11,7 @@ urlpatterns = [
 
 
     # /music/<pk>/    (music followed by an ID)
-    re_path(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(), name='detail'), #creating album_id var
+    re_path(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(), name= 'detail'), #creating album_id var
 
     # /music/album/add/
     path('album/add/', views.AlbumCreate.as_view(), name='album-add'),
@@ -21,4 +21,6 @@ urlpatterns = [
 
     # /music/album/delete/
     re_path(r'album/(?P<pk>[0-9]+)/delete/$', views.AlbumDelete.as_view(), name='album-delete'),
+
+    re_path(r'^register/$', views.UserFormView.as_view(), name='register'),
 ]

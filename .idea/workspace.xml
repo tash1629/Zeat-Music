@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19f8534c-1185-47eb-847e-a886d21fcc64" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/media/liam.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/music/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/music/migrations/0003_auto_20191001_1722.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music/templates/music/registration_form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/music/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/templates/music/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/music/templates/music/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/music/templates/music/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/music/templates/music/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/website/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/website/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/music/templates/music/album_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/music/templates/music/album_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/music/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/music/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/music/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/music/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +19,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -124,6 +120,7 @@
       <workItem from="1568855988129" duration="645000" />
       <workItem from="1568942106417" duration="2279000" />
       <workItem from="1569027468114" duration="11153000" />
+      <workItem from="1571028763568" duration="3675000" />
     </task>
     <task id="LOCAL-00001" summary="-Zeat Music App, first commit, form-template-">
       <created>1569975201891</created>
