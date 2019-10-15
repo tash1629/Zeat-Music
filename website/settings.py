@@ -122,3 +122,6 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+# user will be taken to this url after successful login
+LOGIN_REDIRECT_URL = '/music/'
