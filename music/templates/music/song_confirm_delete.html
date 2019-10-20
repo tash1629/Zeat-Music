@@ -1,0 +1,14 @@
+{% extends 'music/base.html' %}
+{% block body %}
+<form method="post">{% csrf_token %}
+    <div class="alert alert-danger" role="alert">
+        <h4 class="alert-heading">Confirm Delete</h4>
+        <p>
+            Are you sure you want to delete the song <b>{{ object.song_title }}</b>?
+        </p>
+        <hr>
+        <input type="submit" class="btn btn-danger" value="Confirm">
+        <a href="{% url 'music:detail' object.album_id %}" class="btn btn-secondary">Cancel</a>
+    </div>
+</form>
+{% endblock %}

@@ -1,6 +1,6 @@
 from django.views import generic
 from music.forms import UserForm
-from .models import Album
+from .models import Album, Song
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.views.generic.detail import DetailView
@@ -34,6 +34,11 @@ class AlbumUpdate(UpdateView):
 class AlbumDelete(DeleteView):
     model = Album
     success_url = reverse_lazy('music:index')
+
+class SongDelete(DeleteView):
+    model = Song
+    def get_success_url(self):
+        return reverse_lazy('music:detail', kwargs={'pk': self.object.album_id})
 
 class UserFormView(View):
     form_class = UserForm
