@@ -1,93 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Zeat</title>
-    <!-- Loads the path to your static files -->
-    {% load staticfiles %}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" xmlns="http://www.w3.org/1999/html">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Economica&display=swap" rel="stylesheet" type='text/css'>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="{% static 'music/style.css' %}"/>
+    <head>
+        <meta charset="UTF-8">
+        <title>Zeat</title>
+        <!-- Loads the path to your static files -->
+        {% load staticfiles %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" xmlns="http://www.w3.org/1999/html">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Economica&display=swap" rel="stylesheet" type='text/css'>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'music/style.css' %}"/>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-</head>
+    </head>
+
 <body>
 
-    <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
 
-        <!--Header-->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="{% url 'music:index' %}">Zeat</a>
+        {% load staticfiles %}
+        <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+
+            <!--Header-->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{% url 'music:index' %}">Zeat</a>
+            </div>
+
+
+            <!-- Items -->
+
+            <div class="collapse navbar-collapse" id="topNavBar">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="{% url 'music:index' %}"> <!-- takes us to this url -->
+                            <span class="glyphicon glyphicon-cd" aria-hidden="true"></span>&nbsp; Album
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="{% url 'music:index' %}">
+                            <span class="glyphicon glyphicon-music" aria-hidden="true"></span>&nbsp; Songs
+
+                        </a>
+
+                    </li>
+
+                    <li class="">
+                        <a href="{% url 'music:album-add' %}">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp; Add Album
+                        </a>
+                    </li>
+
+                </ul>
+
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="">
+                        <a href="{% url 'logout' %}">
+                            <span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp; Logout
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+
+                    <form class="navbar-form navbar-right" action="/action_page.php">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="q" value="">
+                        </div>
+                        <button type="submit" class="btn btn-default">Search</button>
+                    </form>
+
+                </ul>
+            </div>
         </div>
 
+    </nav>
 
-        <!-- Items -->
+    <div id="demo" class="carousel slide" data-ride="carousel">
 
-        <div class="collapse navbar-collapse" id="topNavBar">
-            <ul class="nav navbar-nav">
-                <li class="active">
-                    <a href="{% url 'music:index' %}"> <!-- takes us to this url -->
-                        <span class="glyphicon glyphicon-cd" aria-hidden="true"></span>&nbsp; Album
-                    </a>
-                </li>
+        <!-- Indicators -->
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+      </ul>
 
-                <li class="">
-                    <a href="{% url 'music:index' %}">
-                        <span class="glyphicon glyphicon-music" aria-hidden="true"></span>&nbsp; Songs
-
-                    </a>
-
-                </li>
-
-                <li class="">
-                    <a href="{% url 'music:album-add' %}">
-                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp; Add Album
-                    </a>
-                </li>
-
-            </ul>
-
-
-            <ul class="nav navbar-nav navbar-right">
-                <li class="">
-                    <a href="{% url 'logout' %}">
-                        <span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp; Logout
-                    </a>
-                </li>
-            </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-
-                <form class="navbar-form navbar-right" action="/action_page.php">
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="q" value="">
-                    </div>
-                    <button type="submit" class="btn btn-default">Search</button>
-                </form>
-
-            </ul>
+      <!-- The slideshow -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://www.billboard.com/articles/news/8533254/liam-payne-staying-in-one-direction-killed-him" alt="Los Angeles"/>
         </div>
+        <div class="carousel-item">
+          <img src="https://upload.wikimedia.org/wikipedia/en/b/b2/Niall_Horan_Flicker.png" alt="Chicago"/>
+        </div>
+        <div class="carousel-item">
+          <img src="https://upload.wikimedia.org/wikipedia/en/b/b2/Niall_Horan_Flicker.png" alt="New York"/>
+        </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+
     </div>
-</nav>
 
-<div class="container-fluid">
-        {% block body %}
-        {% endblock %}
-</div>
+
+    <div class="container-fluid">
+            {% block body %}
+            {% endblock %}
+    </div>
+
 </body>
+
+
+
+
 
 
 </html>
