@@ -20,6 +20,7 @@ class Song(models.Model):
     album = models.ForeignKey(Album, on_delete=models.CASCADE) #relating all songs to an album
     file_type = models.CharField(max_length=10)
     song_title = models.CharField(max_length=250)
+    song_link = models.URLField(max_length=1000, default=True)
     is_favorite = models.BooleanField(default=False)
 
     def __str__(self):
